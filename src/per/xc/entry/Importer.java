@@ -47,7 +47,7 @@ public class Importer {
         String filePath = file.getAbsolutePath();
         String param[] = getArtifactGroupAndVersionFromPath(filePath);
         String execString = "call mvn install:install-file -DgroupId=" + param[0] +
-                            " -Dartifactid=" + param[1] + " -Dversion=" + param[2] +
+                            " -DartifactId=" + param[1] + " -Dversion=" + param[2] +
                             " -Dpackaging=jar -Dfile=" + filePath;
         System.out.println(execString);
         list.add(execString);
